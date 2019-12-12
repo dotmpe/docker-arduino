@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e -o nounset
+
+for tag in alpine fedora centos ubuntu debian debian-slim minideb
+do
+  docker tag arduino:$tag dotmpe/arduino:$tag
+  docker push dotmpe/arduino:$tag
+done
+unset tag
