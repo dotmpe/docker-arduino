@@ -53,6 +53,11 @@ I prefer to manage libraries by hand with GIT submodules.
 To test the toolchain:
 ```sh
 
+  mkdir -vp Blink
+  curl -sSf \
+    https://raw.githubusercontent.com/arduino/Arduino/master/build/shared/examples/01.Basics/Blink/Blink.ino \
+    -o Blink/Blink.ino
+
   arduino compile -b arduino:avr:pro Blink
   arduino upload -p /dev/ttyUSB0 -b arduino:avr:pro Blink
 ```
