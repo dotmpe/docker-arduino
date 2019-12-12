@@ -1,15 +1,15 @@
 [ ![docker autobuild status](https://img.shields.io/docker/build/dotmpe/arduino.svg) ](https://cloud.docker.com/repository/docker/dotmpe/arduino) Finally a CLI for the Arduino toolchain, and in a container too.
 
 Testing some base-images for different Linux distros, maybe to pick one
- already cached by docker. Though with Alpine there is little incentive: only
-few 10s of megabyte.
+already cached by docker. Though with Alpine there is little need to fuss about
+size: just a few 10s of megabytes.
 
 The AVR-GCC toolchain does not run with Musl libc, so the official Alpine is
 out. But there is ``frolvlad/alpine-glibc``.
 
 There are some missing packages that arduino installs itself (into ``~/.arduino15/packages/builtin/tools``): ctags, serial-discovery. This is also where the
 support for different boards go. Like the ``~/Arduino`` folder (with libraries)
-it is kept outside of the image.
+it is kept outside of the image (ie. in a volume).
 
 TODO: not building/testing golang base install
 
