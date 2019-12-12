@@ -1,10 +1,13 @@
 #!/bin/sh
 set -e
 devices=
-for dev in /dev/ttyUSB*
-do
-  devices="$devices --device $dev:$dev"
-done
+
+test ! -e /dev/ttyUSB0 || {
+  for dev in /dev/ttyUSB*
+  do
+    devices="$devices --device $dev:$dev"
+  done
+}
 
 # Only allocate tty if we detect one
 if [ -t 0 -a -t 1 ]; then
