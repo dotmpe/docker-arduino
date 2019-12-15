@@ -4,6 +4,8 @@ set -e -o nounset
 
 . ./.shell.sh
 
+echo "User/Group: $( id -u )/$(id -g)"
+
 # Announce build
 curl -sSf -X POST \
   "https://dotmpe.com/build.php?i=${BUILD_KEY}&SCM_REF=$GIT_SHA1&BUILD_ID=${BUILD_CODE}&START=$(urlsafe_datetime)&SCM_CT=$(urlsafe_datetime "$X_DCKR_CI_TIME")&SCM_AT=$(urlsafe_datetime "$X_DCKR_AI_TIME")" || echo "Announced failed"

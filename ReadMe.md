@@ -1,4 +1,5 @@
-[ ![docker autobuild status](https://img.shields.io/docker/build/dotmpe/arduino.svg) ](https://cloud.docker.com/repository/docker/dotmpe/arduino) [![Docker Pulls](https://img.shields.io/docker/pulls/dotmpe/arduino.svg?style=flat-square)](https://hub.docker.com/r/dotmpe/arduino/) Finally a CLI for the Arduino toolchain, and in a container too.
+Finally a CLI for the Arduino toolchain, and in a container too.
+[ ![docker autobuild status](https://img.shields.io/docker/build/dotmpe/arduino.svg) ](https://cloud.docker.com/repository/docker/dotmpe/arduino) [![Docker Pulls](https://img.shields.io/docker/pulls/dotmpe/arduino.svg?style=flat-square)](https://hub.docker.com/r/dotmpe/arduino/)
 
 ### Info
 Testing some base-images for different Linux distros, maybe to pick one

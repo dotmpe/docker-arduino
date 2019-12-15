@@ -28,16 +28,16 @@ do
   echo "Testing arduino:$tag">&2
   export tag
   rm -rf $DCKR_VOL/arduino
-  ./init.sh
-  ./exec.sh compile -b arduino:avr:pro Blink
+  ./init.sh || continue
+  ./exec.sh compile -b arduino:avr:pro Blink || continue
 done
 unset tag
 
 export tag=alpine shell=ash
 echo "Testing arduino:$tag">&2
 rm -rf $DCKR_VOL/arduino
-./init.sh
-./exec.sh compile -b arduino:avr:pro Blink
+./init.sh || continue
+./exec.sh compile -b arduino:avr:pro Blink || continue
 unset tag shell
 
 #
