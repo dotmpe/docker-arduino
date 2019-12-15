@@ -1,0 +1,3 @@
+[submodule "docs"]
+	path = docs
+  url = https://github.com/dotmpe/docker-arduino.wiki.git

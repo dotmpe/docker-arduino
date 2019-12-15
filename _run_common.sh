@@ -2,6 +2,13 @@
 set -e
 devices=
 
+test ! -e /dev/bus/usb || {
+  for dev in /dev/bus/usb/*/*
+  do
+    devices="$devices --device $dev:$dev"
+  done
+}
+
 test ! -e /dev/ttyUSB0 || {
   for dev in /dev/ttyUSB*
   do

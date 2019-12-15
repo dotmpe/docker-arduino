@@ -3,6 +3,6 @@
 : "${PROJ_DIR:="/srv/project-local/"}"
 : "${DCKR_VOL:="/srv/docker-volumes-local/"}"
 : "${tag:="alpine"}"
-: "${entrypoint:="ash"}"
+: "${shell:="ash"}"
 
-export PROJ_DIR DCKR_VOL tag entrypoint
+export PROJ_DIR DCKR_VOL tag shell

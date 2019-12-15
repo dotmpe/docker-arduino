@@ -2,6 +2,8 @@
 set -e
 basedir="$(dirname $(realpath "$0"))"
 . $basedir/vars.sh
+touch $DCKR_VOL/arduino/shell-history
 sh $basedir/_run_common.sh \
-  --entrypoint "$entrypoint" \
+  -v $DCKR_VOL/arduino/shell-history:/home/arduino/.${shell}_history \
+  --entrypoint "$shell" \
   arduino:$tag "$@"
