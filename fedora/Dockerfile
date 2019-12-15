@@ -1,6 +1,6 @@
 FROM fedora
 
-RUN yum install -y curl
+RUN yum install -y curl which
 
 RUN \
   useradd -m arduino && \

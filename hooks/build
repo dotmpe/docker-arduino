@@ -6,6 +6,8 @@ set -e -o nounset
 
 for tag in alpine fedora centos ubuntu debian debian-slim minideb
 do
+  echo "Building arduino:$tag in ./$tag/">&2
   docker build -t arduino:$tag ./$tag/
+  echo "Done building arduino:$tag">&2
 done
 unset tag

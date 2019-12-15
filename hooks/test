@@ -13,8 +13,19 @@ curl -sSf \
 
 # Test initialization and compile
 
-for tag in fedora centos ubuntu debian debian-slim minideb
+for tag in fedora centos
 do
+  echo "Testing arduino:$tag">&2
+  export tag
+  rm -rf $DCKR_VOL/arduino
+  ./init.sh || continue
+  ./exec.sh compile -b arduino:avr:pro Blink || continue
+done
+unset tag
+
+for tag in ubuntu debian debian-slim minideb
+do
+  echo "Testing arduino:$tag">&2
   export tag
   rm -rf $DCKR_VOL/arduino
   ./init.sh
@@ -23,6 +34,7 @@ done
 unset tag
 
 export tag=alpine shell=ash
+echo "Testing arduino:$tag">&2
 rm -rf $DCKR_VOL/arduino
 ./init.sh
 ./exec.sh compile -b arduino:avr:pro Blink
