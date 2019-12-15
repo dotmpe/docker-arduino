@@ -22,9 +22,10 @@ it is kept outside of the image (ie. in a volume).
 Usage:
 ```sh
 
-  docker run -ti --rm --device /dev/ttyUSB0:/dev/ttyUSB0 \
+  docker run -ti --rm --name arduino --device /dev/ttyUSB0:/dev/ttyUSB0 \
     -v $HOME/.arduino15:/home/arduino/.arduino15 \
     -v $HOME/Arduino:/home/arduino/Arduino \
+    dotmpe/arduino:alpine \
     help
 ```
 
