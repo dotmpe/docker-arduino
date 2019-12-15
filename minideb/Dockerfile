@@ -1,6 +1,6 @@
 FROM bitnami/minideb:stretch
 
-RUN install_packages curl make ca-certificates
+RUN install_packages curl ca-certificates
 
 RUN \
   useradd -m arduino && \

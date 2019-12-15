@@ -2,7 +2,7 @@ FROM golang:1.11-stretch
 
 RUN \
   apt update && \
-  apt install -qqy curl make
+  apt install -qqy curl
 
 RUN \
   useradd -m arduino && \

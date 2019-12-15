@@ -3,7 +3,7 @@ FROM debian
 RUN \
   DEBIAN_FRONTEND=noninteractive; RUNLEVEL=1; \
   apt-get update -qqy && \
-  apt-get install -qqy curl make
+  apt-get install -qqy curl
 
 RUN \
   useradd -m arduino && \

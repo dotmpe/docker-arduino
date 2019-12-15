@@ -31,6 +31,12 @@ Usage:
 
 ## Desiderata
 
+The Alpine/glibc image is working for my AVR/Atmega328p needs so far. Every
+packages but curl and certificates has been removed from the images, idk. if
+those are needed somewhere.
+
+The fedora and centos images have permission issues on the USB tty device.
+
 TODO: build/test golang base install
 
 ## Autobuilds

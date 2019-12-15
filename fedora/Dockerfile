@@ -1,6 +1,6 @@
 FROM fedora
 
-RUN yum install -y curl make git
+RUN yum install -y curl
 
 RUN \
   useradd -m arduino && \

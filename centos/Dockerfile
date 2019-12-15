@@ -1,6 +1,6 @@
 FROM centos
 
-RUN yum install -y curl make
+RUN yum install -y curl
 
 RUN \
   useradd -m arduino && \
