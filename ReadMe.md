@@ -39,8 +39,12 @@ those (make, git) are needed somewhere.
 The fedora and centos images have permission issues on the USB tty device, but
 I'm not too experienced with RH-based OS; its probably some apparmor thing?
 
+Maybe should add sudo, or cleanup sudoers stuff.
+
 The Docker hub build is fairly long, would be nice to split up to branches.
 And add version numbers to keep older versions.
+
+Might want to test with proper docker volumes iso. mounts.
 
 Also up for build/test is a golang based install.
 

@@ -21,21 +21,24 @@ runtest()
 
 for tag in fedora centos
 do
+  echo
   echo "Testing arduino:$tag">&2
-  export tag
+  export tag shell=bash
   runtest || continue
 done
 unset tag
 
 for tag in ubuntu debian debian-slim minideb
 do
+  echo
   echo "Testing arduino:$tag">&2
-  export tag
+  export tag shell=bash
   runtest || continue
 done
 unset tag
 
 export tag=alpine shell=ash
+echo
 echo "Testing arduino:$tag">&2
 runtest
 unset tag shell
