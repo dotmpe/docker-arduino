@@ -2,6 +2,8 @@
 
 set -e -o nounset
 
+. ./.shell.sh
+
 for tag in alpine fedora centos ubuntu debian debian-slim minideb
 do
   docker tag arduino:$tag dotmpe/arduino:$tag
@@ -11,8 +13,6 @@ unset tag
 
 docker tag arduino:alpine dotmpe/arduino:latest
 docker push dotmpe/arduino:latest
-
-. .shell.sh
 
 curl -sSf -X POST \
   "https://dotmpe.com/build.php?i=${BUILD_KEY}&TAGS=alpine;fedora;centos;debian;debian-slim;minideb&BUILD_ID=${BUILD_CODE}&END=$(urlsafe_datetime)"

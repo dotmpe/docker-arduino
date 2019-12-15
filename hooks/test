@@ -2,6 +2,7 @@
 
 set -e -o nounset
 
+. ./.shell.sh
 . ./vars.sh
 
 mkdir -vp $PROJ_DIR/arduino-docs/Blink

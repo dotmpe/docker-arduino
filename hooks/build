@@ -2,6 +2,8 @@
 
 set -e -o nounset
 
+. ./.shell.sh
+
 for tag in alpine fedora centos ubuntu debian debian-slim minideb
 do
   docker build -t arduino:$tag ./$tag/

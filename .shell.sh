@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# highland builder does not obey skip tag
+case "$(echo "$COMMIT_MSG" | tr 'A-Z' 'a-z') " in
+  *"[skip build]"* | *"[build skip]"* | *"[skip ci]"* | *"[ci skip]"* )
+    echo "Skipping build by ci-skip commit message"
+    exit 0 ;;
+esac
+
 true "${DOCKER_TAGS:="$DOCKER_TAG"}"
 
 true "${X_DCKR_CI_TIME:="` git show -s --format=%cI $GIT_SHA1`"}"
