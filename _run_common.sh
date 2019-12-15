@@ -24,7 +24,7 @@ fi
 # Always set -i to support piped and terminal input in run/exec
 DOCKER_RUN_OPTIONS="$DOCKER_RUN_OPTIONS -i"
 
-docker run $DOCKER_RUN_OPTIONS --rm -P \
+docker run $DOCKER_RUN_OPTIONS --rm \
   --name arduino \
   $devices \
   -v $DCKR_VOL/arduino/tools:/home/arduino/.arduino15 \
