@@ -43,6 +43,7 @@ Maybe should add sudo, or cleanup sudoers stuff.
 
 The Docker hub build is fairly long, would be nice to split up to branches.
 And add version numbers to keep older versions.
+Also Hub does not want to run tests the way I set it up now.
 
 Might want to test with proper docker volumes iso. mounts.
 

@@ -19,14 +19,14 @@ runtest()
   ./exec.sh compile -b arduino:avr:pro Blink
 }
 
-for tag in fedora centos
-do
-  echo
-  echo "Testing arduino:$tag">&2
-  export tag shell=bash
-  runtest || continue
-done
-unset tag
+#for tag in fedora centos
+#do
+#  echo
+#  echo "Testing arduino:$tag">&2
+#  export tag shell=bash
+#  runtest || continue
+#done
+#unset tag
 
 for tag in ubuntu debian debian-slim minideb
 do
@@ -37,10 +37,10 @@ do
 done
 unset tag
 
-export tag=alpine shell=ash
-echo
-echo "Testing arduino:$tag">&2
-runtest
-unset tag shell
+#export tag=alpine shell=ash
+#echo
+#echo "Testing arduino:$tag">&2
+#runtest
+#unset tag shell
 
 #

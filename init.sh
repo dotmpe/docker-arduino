@@ -11,5 +11,7 @@ chown -R $uid:$gid $DCKR_VOL/arduino $HOME/project/arduino-docs
 #./run.sh -c 'arduino-cli core update-index && \
 #  arduino-cli core install arduino:avr'
 
+./run.sh -c "ls -la ~/Arduino ~/.arduino15"
+
 ./exec.sh core update-index
 ./exec.sh core install arduino:avr
