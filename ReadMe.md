@@ -35,7 +35,7 @@ TODO: build/test golang base install
 ## Autobuilds
 See [customized highlander-build hooks](https://github.com/dotmpe/docker-arduino/tree/master/hooks)
 for tags.
-The `latest`` tag is put at the `Alpine` image.
+The ``latest`` tag is put on the `Alpine` image.
 
 ## Docs
 See [wiki](https://github.com/dotmpe/docker-arduino/wiki) at github, or local
