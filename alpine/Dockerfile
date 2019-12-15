@@ -4,7 +4,7 @@ RUN wget https://downloads.arduino.cc/arduino-cli/arduino-cli-latest-linux64.tar
     && tar -C /bin -xvf arduino-cli-latest-linux64.tar.bz2 \
     && rm arduino-cli-latest-linux64.tar.bz2
 
-RUN apk --update add --no-cache ca-certificates shadow git
+RUN apk --update add --no-cache ca-certificates shadow
 
 RUN \
   useradd -m arduino && \
