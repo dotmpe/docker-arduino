@@ -21,8 +21,7 @@ it is kept outside of the image (ie. in a volume).
 #### ``:fedora`` [![image size/layers](https://images.microbadger.com/badges/image/dotmpe/arduino:fedora.svg)](https://microbadger.com/images/dotmpe/arduino:fedora "microbadger.com image metadata") [ ![Dockerfile](https://img.shields.io/badge/Dockerfile-GitHub-blue.svg) ](https://github.com/dotmpe/docker-arduino/blob/master/fedora/Dockerfile)
 
 Usage:
-```sh
-
+```
   docker run -ti --rm --name arduino --device /dev/ttyUSB0:/dev/ttyUSB0 \
     -v $HOME/.arduino15:/home/arduino/.arduino15 \
     -v $HOME/Arduino:/home/arduino/Arduino \
@@ -36,7 +35,8 @@ The Alpine/glibc image is working for my AVR/Atmega328p needs so far. Every
 package but curl and certificates has been removed from the images, idk. if
 those (make, git) are needed somewhere.
 
-The fedora and centos images have permission issues on the USB tty device.
+The fedora and centos images have permission issues on the USB tty device, but
+I'm not too experienced with RH-based OS; its probably some apparmor thing?
 
 The Docker hub build is fairly long, would be nice to split up to branches.
 And add version numbers to keep older versions.

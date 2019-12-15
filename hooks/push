@@ -18,4 +18,4 @@ docker push dotmpe/arduino:latest
 
 # Sign-off build
 curl -sSf -X POST \
-  "https://dotmpe.com/build.php?i=${BUILD_KEY}&TAGS=alpine;fedora;centos;debian;debian-slim;minideb&BUILD_ID=${BUILD_CODE}&END=$(urlsafe_datetime)"
+  "https://dotmpe.com/build.php?i=${BUILD_KEY}&TAGS=alpine;fedora;centos;debian;debian-slim;minideb&BUILD_ID=${BUILD_CODE}&END=$(urlsafe_datetime)" || echo "Sign-off failed"
