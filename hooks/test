@@ -9,20 +9,21 @@ curl -sSf \
   https://raw.githubusercontent.com/arduino/Arduino/master/build/shared/examples/01.Basics/Blink/Blink.ino \
   -o $PROJ_DIR/arduino-docs/Blink/Blink.ino
 
-#set -x
-#
-#for tag in fedora centos ubuntu debian debian-slim minideb
-#do
-#  export tag
-#  rm -rf $DCKR_VOL/arduino
-#  ./init.sh
-#  ./exec.sh compile -b arduino:avr:pro Blink
-#done
-#unset tag
-#
-#export tag=alpine entrypoint=ash
-#rm -rf $DCKR_VOL/arduino
-#./init.sh
-#./exec.sh compile -b arduino:avr:pro Blink
+
+# Test initialization and compile
+
+for tag in fedora centos ubuntu debian debian-slim minideb
+do
+  export tag
+  rm -rf $DCKR_VOL/arduino
+  ./init.sh
+  ./exec.sh compile -b arduino:avr:pro Blink
+done
+unset tag
+
+export tag=alpine shell=ash
+rm -rf $DCKR_VOL/arduino
+./init.sh
+./exec.sh compile -b arduino:avr:pro Blink
 
 #

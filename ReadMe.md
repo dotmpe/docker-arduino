@@ -32,12 +32,15 @@ Usage:
 ## Desiderata
 
 The Alpine/glibc image is working for my AVR/Atmega328p needs so far. Every
-packages but curl and certificates has been removed from the images, idk. if
-those are needed somewhere.
+package but curl and certificates has been removed from the images, idk. if
+those (make, git) are needed somewhere.
 
 The fedora and centos images have permission issues on the USB tty device.
 
-TODO: build/test golang base install
+The Docker hub build is fairly long, would be nice to split up to branches.
+And add version numbers to keep older versions.
+
+Also up for build/test is a golang based install.
 
 ## Autobuilds
 See [customized highlander-build hooks](https://github.com/dotmpe/docker-arduino/tree/master/hooks)
