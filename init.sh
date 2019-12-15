@@ -13,7 +13,7 @@ chown -R $uid:$gid $DCKR_VOL/arduino $PROJ_DIR/arduino-docs
 
 ./run.sh -c "ls -la ~/Arduino ~/.arduino15"
 
-sh $basedir/_run_common.sh \
+sh ./_run_common.sh \
   -v $DCKR_VOL/arduino/shell-history:/home/arduino/.${shell}_history \
   --entrypoint "$shell" \
   -u root \
