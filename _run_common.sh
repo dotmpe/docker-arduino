@@ -25,7 +25,6 @@ fi
 DOCKER_RUN_OPTIONS="$DOCKER_RUN_OPTIONS -i"
 
 docker run $DOCKER_RUN_OPTIONS --rm \
-  --name arduino \
   $devices \
   -v $DCKR_VOL/arduino/tools:/home/arduino/.arduino15 \
   -v $PROJ_DIR/arduino-docs:/home/arduino/Arduino \
