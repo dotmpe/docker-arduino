@@ -7,4 +7,4 @@ sh $basedir/_run_common.sh \
   -v $DCKR_VOL/arduino/shell-history:/home/arduino/.${shell}_history \
   --name arduino \
   --entrypoint "$shell" \
-  arduino:$tag "$@"
+  $dckr_img:$tag "$@"

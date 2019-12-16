@@ -17,7 +17,7 @@ sh ./_run_common.sh \
   -v $DCKR_VOL/arduino/shell-history:/home/arduino/.${shell}_history \
   --entrypoint "$shell" \
   -u root \
-  arduino:$tag -c "chown -R arduino:arduino ~/Arduino ~/.arduino15"
+  $dckr_img:$tag -c "chown -R arduino:arduino ~/Arduino ~/.arduino15"
 
 ./run.sh -c "ls -la ~/Arduino ~/.arduino15"
 
