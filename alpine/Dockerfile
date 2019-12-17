@@ -19,5 +19,6 @@ USER arduino
 VOLUME /home/arduino/.arduino15
 VOLUME /home/arduino/Arduino
 WORKDIR /home/arduino/Arduino
+
 ENTRYPOINT ["arduino-cli"]
 CMD []

@@ -5,10 +5,10 @@ set -e -o nounset
 . ./.shell.sh
 . ./vars.sh
 
-mkdir -vp $PROJ_DIR/arduino-docs/Blink
+mkdir -vp $arduino_docs/Blink
 curl -sSf \
   https://raw.githubusercontent.com/arduino/Arduino/master/build/shared/examples/01.Basics/Blink/Blink.ino \
-  -o $PROJ_DIR/arduino-docs/Blink/Blink.ino
+  -o $arduino_docs/Blink/Blink.ino
 
 
 # Test initialization and compile

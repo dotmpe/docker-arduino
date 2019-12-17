@@ -1,10 +1,12 @@
 #!/bin/sh
 set -e
+test -z "${DEBUG-}" || set -x
 basedir="$(dirname $(realpath "$0"))"
-. $basedir/vars.sh
-touch $DCKR_VOL/arduino/shell-history
+test -n "${arduino_docs:-}" || {
+  . $basedir/vars.sh
+}
 sh $basedir/_run_common.sh \
-  -v $DCKR_VOL/arduino/shell-history:/home/arduino/.${shell}_history \
+  -v $shell_history:/home/arduino/.${shell}_history \
   --name arduino \
   --entrypoint "$shell" \
   $dckr_img:$tag "$@"

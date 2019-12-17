@@ -3,18 +3,19 @@
 set -e -o nounset
 
 . ./.shell.sh
+. ./vars.sh
 
 echo "Tagging new images"
 
 for tag in alpine fedora centos ubuntu debian debian-slim minideb
 do
-  docker tag arduino:$tag $dckr_img:$tag
-  docker push $dckr_img:$tag
+  docker tag arduino:$tag dotmpe/arduino:$tag
+  docker push dotmpe/arduino:$tag
 done
 unset tag
 
-docker tag arduino:alpine $dckr_img:latest
-docker push $dckr_img:latest
+docker tag arduino:alpine dotmpe/arduino:latest
+docker push dotmpe/arduino:latest
 
 # Sign-off build
 curl -sSf -X POST \
